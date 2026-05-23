@@ -433,7 +433,10 @@ mod tests {
         let body = title.trim_end_matches("...");
         assert!(body.is_char_boundary(body.len()));
         assert!(
-            body.chars().last().map(|c| c == '🎉' || c == ' ' || c.is_ascii()).unwrap_or(false)
+            body.chars()
+                .last()
+                .map(|c| c == '🎉' || c == ' ' || c.is_ascii())
+                .unwrap_or(false)
         );
     }
 
